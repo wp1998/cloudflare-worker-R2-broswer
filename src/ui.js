@@ -43,10 +43,6 @@ export function showList(files, folders, path) {
         </div>
         <div class="row">
             <div class="col col-3">
-                <div class="input-group">
-                    <input class="form-control form-control-sm" id="formFileSm" type="file">
-                    <button type="button" class="btn btn-sm btn-dark">上传</button>
-                </div>
             </div>
             <div class="col col-9 text-end">
                 <em><a href="https://github.com/wp1998/r2-broswer-worker"> GitHub </a></em>
