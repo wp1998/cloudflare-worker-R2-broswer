@@ -55,7 +55,6 @@ export function showList(files, folders, path, env) {
                     const url = currentURL + file.name;
                     const headers = {
                         "Content-Type": file.type,
-                        "API_KEY": '${env.KEY}'
                     };
                     await fetch(url, {
                         method: 'PUT',

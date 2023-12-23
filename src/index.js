@@ -1,5 +1,5 @@
 import { showList } from './broswer';
-import { showLogin, validateAuthorization } from './login';
+import { validateAuthorization } from './login';
 
 export default {
 
@@ -14,7 +14,6 @@ export default {
         // 需要通过 HTTP Basic Auth，用户名和密码保存在 wrangler.toml
         // 获取 header 验证信息
         const authorization = request.headers.get('Authorization');
-        console.log(authorization);
         // 用户名和密码验证
         if (!authorization || !validateAuthorization(authorization, env)) {
             return new Response("You need to login.", {
@@ -80,7 +79,6 @@ export default {
             await r2.put(key, request.body, {
                 httpMetadata: request.headers,
             });
-            console.log(key);
             return new Response(`Put ${key} successfully!`);
         };
 
@@ -91,7 +89,6 @@ export default {
             // if (api_key === env.KEY) {
             const key = decodeURIComponent(path.substring(1));
             await r2.delete((key));
-            console.log(key)
             return new Response(`DELETE ${key} successfully!`)
             
         };
