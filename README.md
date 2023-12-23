@@ -7,7 +7,6 @@ A personal network disk based on cloudflare worker and R2 object storage, used t
 
 # screenshot
 ![浏览界面截图](screenshot01.png)
-```
 
 demo: only read
 - https://r2-music.wp1998.workers.dev/
