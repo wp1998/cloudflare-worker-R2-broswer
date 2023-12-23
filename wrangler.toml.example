@@ -13,3 +13,10 @@ routes = [
 r2_buckets  = [
     { binding = "BUCKET_bucketname", bucket_name = "bucketname"}
 ]
+
+# HTTP Basic Auth 
+[vars]
+TITLE = 'site name'
+DESC = 'site introduction'
+USER = 'username'
+PASS = 'password'
