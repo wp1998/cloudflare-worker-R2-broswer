@@ -332,14 +332,12 @@ function getFileDateStr(date) {
 }
 
 // 文件大小格式化
-function getFileSizeDescription(fileSize) {
-    const units = ["Byte", "KB", "MB", "GB"];
-    let size = fileSize;
-    let unitIndex = 0;
-
-    while (size >= 1024 && unitIndex < units.length - 1) {
-        size /= 1024;
-        unitIndex++;
+function getFileSizeDescription(bytes) {
+    const units = ['Byte', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    let i = 0;
+    while (bytes >= 1024) {
+      bytes /= 1024;
+      i++;
     }
-    return size.toFixed(2) + units[unitIndex];
-};
+    return `${bytes.toFixed(2)} ${units[i]}`;
+}

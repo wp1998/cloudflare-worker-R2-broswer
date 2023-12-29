@@ -9,4 +9,4 @@ A personal network disk based on cloudflare worker and R2 object storage, used t
 ![浏览界面截图](screenshot01.png)
 
 # demo: 
-- read only: https://r2-music.wp1998.workers.dev/
+- read only: https://r2-cf-pages.pages.dev/
